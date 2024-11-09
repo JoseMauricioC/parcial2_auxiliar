@@ -22,6 +22,7 @@ export class SeriesService {
       director: createSeriesDto.director.trim(),
       temporadas: createSeriesDto.temporadas,
       fechaEstreno: createSeriesDto.fechaEstreno,
+      //tipoclasificacion: createSeriesDto.tipoClasificacion,
     });
 
     if (existe) throw new ConflictException('La serie ya existe');
@@ -32,6 +33,7 @@ export class SeriesService {
     serie.director = createSeriesDto.director.trim();
     serie.temporadas = createSeriesDto.temporadas;
     serie.fechaEstreno = createSeriesDto.fechaEstreno;
+    //serie.tipoclasificacion = createSeriesDto.tipoClasificacion;
     return this.seriesRepository.save(serie);
   }
   // findAll() {

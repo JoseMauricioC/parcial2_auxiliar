@@ -25,6 +25,11 @@ export class CreateSeriesDto {
   @IsInt({ message: 'El campo temporadas debe ser un número entero' })
     readonly temporadas: number;
 
+    // @ApiProperty()
+    // @IsNotEmpty({ message: 'El campo tipo clasificacion es obligatorio' })
+    // @IsString({ message: 'El campo tipo clasificacion debe ser de tipo cadena' })
+    //   readonly tipoClasificacion: string;
+
   @ApiProperty()
     @IsDefined({ message: 'El campo fechaEstreno debe estar definido' })
     @IsDateString({}, { message: 'El campo fechaEstreno debe ser de tipo fecha' })
